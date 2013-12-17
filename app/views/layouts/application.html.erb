@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class="container">
+	<header class="row">
+		<nav class="navbar navbar-pills">
+			<div class="navbar-header">
+				<%= link_to( image_tag('logo.png', class: 'logo'), root_path, class: "pull-left") %>
+				<%= link_to("Artery", root_path, class: 'navbar-brand') %>
+				<ul class="nav navbar-nav">
+					<li><%= link_to "Museums", museums_path %></li>
+					<li><%= link_to "Artists", artists_path %></li>
+					<li><%= link_to "Paintings", paintings_path %></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<%= yield %>
+</div>
 
 </body>
 </html>
