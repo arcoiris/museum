@@ -9,6 +9,12 @@ gem 'sqlite3'
 group :development do
 	gem 'guard-livereload', require: false
 	gem 'rack-livereload'
+	gem 'sqlite3'
+end
+
+group :production do 
+	gem 'pg'
+	gem 'rails_12factor'
 end
 
 gem 'bootstrap-sass', "~>3.0.3.0"
